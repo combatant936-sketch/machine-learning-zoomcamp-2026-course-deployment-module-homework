@@ -27,4 +27,4 @@ second = float(pipeline.predict_proba([record])[0, 1])
 
 assert 0 < first < 1
 assert first == second
-print({"conversion_probability": round(first, 6), "conversion": first >= 0.5})
+print({"conversion_probability": round(first, 3), "conversion": first >= 0.5})
