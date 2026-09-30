@@ -46,6 +46,6 @@ def predict(lead: Lead) -> dict[str, Any]:
     record = normalize_record(lead.model_dump())
     probability = float(pipeline.predict_proba([record])[0, 1])
     return {
-        "conversion_probability": round(probability, 6),
+        "conversion_probability": round(probability, 3),
         "conversion": probability >= 0.5,
     }
